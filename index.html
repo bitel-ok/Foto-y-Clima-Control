@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Clima & Foto Control</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="style.css">
     <style>
         /* Contenedor que tapa todo */
@@ -40,15 +41,28 @@
         <img id="foto-frame" src="" alt="Portarretratos">
     </div>
 
-    <div id="app" class="contenedor">
-        <div class="cabecera">
-            <h1 id="ciudad">Cargando...</h1>
-            <p id="hora-actualizacion">--:--</p>
-        </div>
-        <div class="detalles">
-        </div>
-    <div id="status" class="status loading"></div>
+<div id="app" class="contenedor">
+    <div class="cabecera">
+        <h1 id="ciudad">Cargando...</h1>
+        <p id="hora-actualizacion">--:--</p>
     </div>
+
+    <div class="bloque-principal">
+        <div class="temp-container">
+            <span id="temp-valor">--</span><span class="grado">°C</span>
+        </div>
+        <img id="clima-icono" src="" class="icono-clima" style="display:none;">
+        <p id="clima-desc">Conectando...</p> 
+    </div>
+
+    <div class="detalles">
+        <div class="detalle-item"><span class="label">ST:</span><span id="st-valor" class="valor">--</span>°</div>
+        <div class="detalle-item"><span class="label">Hum:</span><span id="hum-valor" class="valor">--</span>%</div>
+        <div class="detalle-item"><span class="label">Viento:</span><span id="viento-valor" class="valor">--</span> km/h</div>
+    </div>
+
+    <div id="status" class="status loading"></div>
+</div>
 
     <script src="script.js"></script>
 </body>
