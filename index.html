@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Clima & Foto Control</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ESTILOS EXTRA PARA EL PORTARRETRATOS (Ponlos aquí o en style.css) */
+        
+        /* Contenedor que tapa todo */
+        #portarretratos-container {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999; /* Por encima de todo */
+            overflow: hidden;
+        }
+
+        /* La imagen en sí */
+        #foto-frame {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la foto sin deformar */
+            border: none;
+            /* Evitamos transiciones CSS complejas, consumen CPU */
+        }
+        
+        /* Asegurar que el dashboard no scrollee cuando está de fondo */
+        body.modo-foto {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body id="cuerpo">
+
+    <div id="portarretratos-container">
+        <img id="foto-frame" src="" alt="Portarretratos">
+    </div>
+
+    <div id="app" class="contenedor">
+        <div class="cabecera">
+            <h1 id="ciudad">Cargando...</h1>
+            <p id="hora-actualizacion">--:--</p>
+        </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
